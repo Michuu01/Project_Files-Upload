@@ -1,15 +1,12 @@
 package com.home.Recruitment_Project.user;
-
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.List;
 
 @Entity
 public class users implements UserDetails {
@@ -20,6 +17,8 @@ public class users implements UserDetails {
     private String email;
     private String password;
     private String Role;
+
+
 
 
     @Override
@@ -103,7 +102,19 @@ public class users implements UserDetails {
     }
 
     @Override
+    public String toString() {
+        return "users{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", Role='" + Role + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean isEnabled() {
         return true;
     }
 }
+
