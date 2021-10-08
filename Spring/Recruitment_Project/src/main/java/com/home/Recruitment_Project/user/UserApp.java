@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Entity
-public class users implements UserDetails {
+public class UserApp implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -83,17 +83,17 @@ public class users implements UserDetails {
         this.Role = role;
     }
 
-    public users() {
+    public UserApp() {
     }
 
-    public users(Long id, String username, String password, String role) {
+    public UserApp(Long id, String username, String password, String role) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.Role = role;
     }
 
-    public users(Long id, String username, String email, String password, String role) {
+    public UserApp(Long id, String username, String email, String password, String role) {
         this.id = id;
         this.username = username;
         this.email = email;

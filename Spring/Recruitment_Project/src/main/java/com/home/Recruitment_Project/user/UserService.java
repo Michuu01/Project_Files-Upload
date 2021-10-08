@@ -10,23 +10,32 @@ import java.util.List;
 public class UserService {
     private UserRepo userRepo;
     private PasswordEncoder passwordEncoder;
+
     public UserService(UserRepo userRepo, PasswordEncoder passwordEncoder) {
         this.userRepo = userRepo;
         this.passwordEncoder = passwordEncoder;
     }
-    public void addUser(users newUsers) {
-        newUsers.setPassword(passwordEncoder.encode(newUsers.getPassword()));
-        newUsers.setRole("ADMIN");
-        if (newUsers.getUsername().equals("")){
-            throw  new IllegalArgumentException("usernam empty");
-        }
-        userRepo.save(newUsers);
+
+
+    public UserApp addUser(UserApp newUserApp) {
+        newUserApp.setRole("ADMIN");
+        return userRepo.save(newUserApp);
     }
-    public List<users> allUsers(){
+
+    public UserApp fetchUserByEmail(String email) {
+        return userRepo.findByEmail(email);
+    }
+
+    public UserApp fetchUserByUsernameAndPassword(String username, String password) {
+        return userRepo.findByUsernameAndPassword(username, password);
+    }
+
+
+    public List<UserApp> allUsers() {
         return userRepo.findAll();
     }
 
-public void deleteUser(String id){
+    public void deleteUser(String id) {
 
-}
+    }
 }

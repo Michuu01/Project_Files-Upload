@@ -3,7 +3,7 @@ package com.home.Recruitment_Project;
 
 import com.home.Recruitment_Project.repository.UserRepo;
 
-import com.home.Recruitment_Project.user.users;
+import com.home.Recruitment_Project.user.UserApp;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -12,13 +12,13 @@ public class UserSave {
 
 
     public UserSave(UserRepo userRepo, PasswordEncoder passwordEncoder) {
-        users a = new users();
+        UserApp a = new UserApp();
         a.setUsername("Michu");
         a.setPassword(passwordEncoder.encode("Michu123"));
         a.setRole("ROLE_ADMIN");
         a.setEmail("DAda");
 
-        users b = new users();
+        UserApp b = new UserApp();
         b.setUsername("Adam");
         b.setPassword(passwordEncoder.encode("Adam"));
         b.setRole("ROLE_MODERATOR");

@@ -35,9 +35,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 http.csrf().disable();
 http.headers().disable();
+http.httpBasic().disable();
         http.authorizeRequests()
-        .antMatchers("/login").hasRole("MODERATOR")
         .antMatchers("/bye").hasRole("ADMIN");
-
+;
     }
 }
