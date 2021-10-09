@@ -34,24 +34,32 @@ font-size: 22px;
 #username:focus, #password:focus {
 outline: 5px solid #e5f2f8;
 }
+
 #lower {
 background: #fafafa;
-width: 260px;
-padding: 5px 60px;
-margin-top: 20px;
+width: 220px;
+padding: 16px 80px;
+margin-top: 12px;
 }
 input[type="submit"] {
 width: 70px;
-padding: 5px 13px;
+padding: 5px 11px;
 border: 1px solid #0891c7;
 color: white;
 text-shadow: 0 0 1px black;
-background: #98c9dc;
+background: #61b5d6;
 position: relative;
 left: 180px;
 }
 #panel, input[type="submit"] {
-    -webkit-border-radius: 5px; 
-    -moz-border-radius: 5px; 
-    border-radius: 5px; 
+    -webkit-border-radius: 16px; 
+    -moz-border-radius: 16px; 
+    border-radius: 3px; 
+}
+#register{
+    left:-80px
+}
+small{
+   color: rgb(255, 0, 0);
+   font-size: 20px;
 }

@@ -3,10 +3,7 @@ package com.home.Recruitment_Project.user;
 import com.home.Recruitment_Project.repository.UserRepo;
 import lombok.SneakyThrows;
 import org.springframework.expression.ExpressionException;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +19,7 @@ public class UserController {
     }
 
     @PostMapping("/register")
+    @CrossOrigin(origins = "http://localhost:4200")
     public UserApp register(@RequestBody UserApp newUser) {
         String tempEmail = newUser.getEmail();
         if (tempEmail != null) {
@@ -37,6 +35,7 @@ public class UserController {
 
     @SneakyThrows
     @PostMapping("/login")
+    @CrossOrigin(origins = "http://localhost:4200")
     public UserApp loginUser(@RequestBody UserApp userLogin) {
         String username = userLogin.getUsername();
         String password = userLogin.getPassword();
@@ -51,7 +50,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/")
+    @GetMapping("/loginsuccess")
     public String hello() {
         return "Hello everyone";
     }
