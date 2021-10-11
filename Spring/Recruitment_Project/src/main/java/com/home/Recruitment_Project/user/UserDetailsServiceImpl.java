@@ -1,5 +1,6 @@
 package com.home.Recruitment_Project.user;
 
+import com.home.Recruitment_Project.repository.FileRepo;
 import com.home.Recruitment_Project.repository.UserRepo;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,8 +13,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     private final UserRepo userRepo;
 
+
+
     public UserDetailsServiceImpl(UserRepo userRepo) {
         this.userRepo = userRepo;
+
     }
 
     @Override

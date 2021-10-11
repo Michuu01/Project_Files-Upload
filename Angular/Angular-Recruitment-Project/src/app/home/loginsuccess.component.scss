@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 header{
     background: url('/assets/background.jpg');
@@ -55,4 +54,13 @@ font-size: 55px;
 margin-top: 250px;
 margin-left: 530px;
 margin-right: 530px;
+}
+
+p{
+    text-align: left;
+    color: rgb(211, 36, 36);
+    margin-left: 100px;
+    margin-top: 40px;
+    font-size: 40px;
+    background: beige;
 }

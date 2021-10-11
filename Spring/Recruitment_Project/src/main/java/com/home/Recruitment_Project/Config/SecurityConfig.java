@@ -37,8 +37,7 @@ http.csrf().disable();
 http.headers().disable();
 http.httpBasic().disable();
         http.authorizeRequests()
-        .antMatchers("/bye").hasRole("ADMIN")
-        .antMatchers("/loginsuccess").hasRole("ADMIN");
+        .antMatchers("/loginsuccess").hasRole("USER");
 ;
     }
 }

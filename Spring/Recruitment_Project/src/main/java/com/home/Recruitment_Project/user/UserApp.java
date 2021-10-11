@@ -1,4 +1,5 @@
 package com.home.Recruitment_Project.user;
+import com.home.Recruitment_Project.file.File;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,7 +18,8 @@ public class UserApp implements UserDetails {
     private String email;
     private String password;
     private String Role;
-
+@OneToMany
+private List<File> file;
 
 
 
