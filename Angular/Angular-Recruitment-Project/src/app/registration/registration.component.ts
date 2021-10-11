@@ -20,9 +20,13 @@ export class RegistrationComponent implements OnInit {
   registerUser(){
 
     this.service.RegisterUsertoRemote(this.user).subscribe(
-      data => 
-      this.router.navigate(['/loginsuccess']),
+      data =>{ 
+      console.log("register confirm");
+        this.router.navigate(['']);
+      
+     },
     
+
       error =>
          console.log("NIE UDALO SIE....")
     

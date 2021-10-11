@@ -20,7 +20,8 @@ public class UserSave {
 
         UserApp b = new UserApp();
         b.setUsername("Adam");
-        b.setPassword(passwordEncoder.encode("Adam"));
+        b.setPassword
+                ("Adam");
         b.setRole("ROLE_MODERATOR");
 
 

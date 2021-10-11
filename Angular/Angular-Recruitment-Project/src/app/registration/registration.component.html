@@ -3,12 +3,12 @@
 
     <form #registerform = "ngForm" (ngSubmit)= "registerUser()">
         <div id="panel">
- <label for="email">email:</label>
- <input type="text" id="email" name="email">
+ <label for="email">Email:</label>
+ <input type="text" id="email" name="email" [(ngModel)]= "user.email" >
     <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+    <input type="text" id="username" name="username" [(ngModel)]= "user.username">
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
+    <input type="password" id="password" name="password" [(ngModel)] = "user.password">
     <div id="lower">
     <!-- <input type="submit" value="Login"> -->
     <input type="submit" id="register" value="register">

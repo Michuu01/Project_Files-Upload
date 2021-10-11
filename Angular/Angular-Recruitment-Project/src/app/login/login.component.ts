@@ -22,8 +22,9 @@ msg= ' ';
   loginUser(){
 
 this.service.loginUserFromRemote(this.user).subscribe(
+
   data => 
-  this.router.navigate(['/loginsuccess']),
+  this.router.navigate(['']),
 
   error =>{
      console.log("NIE UDALO SIE....");
