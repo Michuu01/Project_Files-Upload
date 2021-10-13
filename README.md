@@ -3,7 +3,7 @@ Project
 
 Projekt opiera się na stworzeniu strony internetowej która będzie miała opcje:
 - Rejestracji
-- Logowaniu
+- Logowania
 - Podziału dostępu
 - Wysyłania plików
 - Pobierania plików
