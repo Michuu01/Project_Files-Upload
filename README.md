@@ -11,4 +11,4 @@ Projekt opiera się na stworzeniu strony internetowej która będzie miała opcj
 - Historie zmian
 - inne
 
-## description soon
+## project description in english soon
