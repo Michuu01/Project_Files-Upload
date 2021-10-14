@@ -12,6 +12,7 @@ export class RegistrationComponent implements OnInit {
 
 
   user= new User();
+  msg= ' ';
   constructor(private service:RegistrationService,
      private router:Router) { }
 
@@ -27,9 +28,10 @@ export class RegistrationComponent implements OnInit {
      },
     
 
-      error =>
-         console.log("NIE UDALO SIE....")
-    
+      error =>{
+         console.log("NIE UDALO SIE....");
+         this.msg="you enter a incorrect registration details!";
+      }
     )
     }
     

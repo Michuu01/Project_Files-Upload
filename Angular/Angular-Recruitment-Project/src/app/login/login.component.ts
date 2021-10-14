@@ -23,12 +23,13 @@ msg= ' ';
 
 this.service.loginUserFromRemote(this.user).subscribe(
 
-  data => 
-  this.router.navigate([''] ),
-
+  data => {
+  console.log("ok");
+  this.router.navigate([''] );
+  },
   error =>{
      console.log("NIE UDALO SIE....");
-this.msg="Bad credentials!";
+this.msg="Please enter a valid username or password";
     
 }
 )

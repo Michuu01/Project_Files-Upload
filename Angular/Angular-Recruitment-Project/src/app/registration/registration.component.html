@@ -3,6 +3,8 @@
 
     <form #registerform = "ngForm" (ngSubmit)= "registerUser()">
         <div id="panel">
+
+            <small class = "text-danger">{{msg}}</small>
  <label for="email">Email:</label>
  <input type="text" id="email" name="email" [(ngModel)]= "user.email" >
     <label for="username">Username:</label>

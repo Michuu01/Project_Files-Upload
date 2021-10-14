@@ -2,11 +2,12 @@
     <form #loginform = "ngForm" (ngSubmit)= "loginUser()">
   
 <div id="panel">
-    <small class = "danger">{{msg}}</small>
-<label for="username">Username:</label>
-<input type="username" id="username" name="username" [(ngModel)]= "user.username">
+    <small class = "text-danger">{{msg}}</small>
+    <label for="username">Username:</label>
+<input type="username" id="username" name="username" [(ngModel)]= "user.username" #username="ngModel" >
+
 <label for="password">Password:</label>
-<input type="password" id="password" name="password"[(ngModel)] = "user.password">
+<input type="password" id="password" name="password"[(ngModel)] = "user.password" #pasasword = "ngModel">
 <div id="lower">
 <input type="submit" value="Login">
 </div>

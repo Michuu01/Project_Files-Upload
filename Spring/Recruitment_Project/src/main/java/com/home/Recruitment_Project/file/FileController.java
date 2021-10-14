@@ -1,6 +1,4 @@
-package com.home.Recruitment_Project.file;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package com.home.Recruitment_Project.file;;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;

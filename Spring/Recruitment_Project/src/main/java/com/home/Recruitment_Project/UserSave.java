@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class UserSave {
 
-
+//test class
     public UserSave(UserRepo userRepo, PasswordEncoder passwordEncoder) {
         UserApp a = new UserApp();
         a.setUsername("Michu");
