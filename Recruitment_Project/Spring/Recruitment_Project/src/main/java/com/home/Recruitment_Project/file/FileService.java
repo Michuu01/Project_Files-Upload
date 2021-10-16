@@ -1,4 +1,5 @@
 package com.home.Recruitment_Project.file;
+import com.home.Recruitment_Project.file.File;
 import com.home.Recruitment_Project.repository.FileRepo;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
