@@ -11,6 +11,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
 @RequestMapping("/File")
+@CrossOrigin(origins = "http://localhost:4200")
     public class FileController {
 
     FileService fileService;
@@ -21,6 +22,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 
     @PostMapping("/Upload")
+    @CrossOrigin(origins = "http://localhost:4200")
         public FileRequest uploadFile(MultipartFile file) {
             File model = fileService.saveFile(file);
             String fileUri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/download/").
@@ -36,6 +38,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 //        }
 
         @GetMapping("/download/{fileName}")
+        @CrossOrigin(origins = "http://localhost:4200")
         public ResponseEntity<ByteArrayResource> downloadFile(@PathVariable String fileName) {
             File model = fileService.getFile(fileName);
             return ResponseEntity.ok().
@@ -46,4 +49,5 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
         }
 
     }
+
 

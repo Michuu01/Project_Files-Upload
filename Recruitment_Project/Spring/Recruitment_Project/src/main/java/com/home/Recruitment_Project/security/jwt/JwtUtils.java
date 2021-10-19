@@ -15,10 +15,10 @@ import java.util.Date;
 public class JwtUtils {
   private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
 
-  @Value("${jwt.Secret}")
+  @Value("${Michal.app.jwtSecret}")
   private String Secret;
 
-  @Value("${jwt.ExpirationMs}")
+  @Value("${Michal.app.jwtExpirationMs}")
   private int ExpirationMs;
 
   public String generateJwtToken(Authentication authentication) {
@@ -26,11 +26,12 @@ public class JwtUtils {
     UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
 
     return Jwts.builder().setSubject((userPrincipal.getUsername())).setIssuedAt(new Date())
-        .setExpiration(new Date((new Date()).getTime() + ExpirationMs)).signWith(SignatureAlgorithm.HS256, Secret)
+        .setExpiration(new Date((new Date()).getTime() + ExpirationMs)).signWith(SignatureAlgorithm.HS512, Secret)
         .compact();
   }
 
   public String getUserNameFromJwtToken(String token) {
+
     return Jwts.parser().setSigningKey(Secret).parseClaimsJws(token).getBody().getSubject();
   }
 

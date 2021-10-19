@@ -1,0 +1,15 @@
+
+    <form #loginform = "ngForm" (ngSubmit)= "loginUser()">
+  
+        <div id="panel">
+            <small class = "text-danger">{{msg}}</small>
+            <label for="username">Username:</label>
+        <input type="username" id="username" name="username" [(ngModel)] = "form.username" #username="ngModel" >
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)] = "form.password" #pasasword ="ngModel">
+        <div id="lower" >
+        <input type="submit"   value="Login" >
+        </div>
+        </div>
+        </form>

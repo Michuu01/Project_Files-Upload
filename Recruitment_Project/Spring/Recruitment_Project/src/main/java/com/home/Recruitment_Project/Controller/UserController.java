@@ -53,6 +53,7 @@ public class UserController {
     JwtUtils jwtUtils;
 
     @PostMapping("/signin")
+    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
         Authentication authentication = authenticationManager.authenticate(
@@ -74,6 +75,7 @@ public class UserController {
     }
 
     @PostMapping("/signup")
+    @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest signUpRequest) {
         if (userRepo.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity
