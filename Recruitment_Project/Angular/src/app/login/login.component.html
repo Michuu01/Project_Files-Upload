@@ -1,7 +1,7 @@
-
+<div class="container">
     <form #loginform = "ngForm" (ngSubmit)= "loginUser()">
   
-        <div id="panel">
+        <div id="panel" >
             <small class = "text-danger">{{msg}}</small>
             <label for="username">Username:</label>
         <input type="username" id="username" name="username" [(ngModel)] = "form.username" #username="ngModel" >
@@ -11,5 +11,6 @@
         <div id="lower" >
         <input type="submit"   value="Login" >
         </div>
-        </div>
+    </div>
         </form>
+    </div>

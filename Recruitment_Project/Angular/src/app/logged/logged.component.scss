@@ -1,0 +1,36 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: url('/assets/background.jpg');
+    width: 100vw ;
+    height: 100vh ;
+    margin-left: -8px;
+    margin-right: 8px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+    background-size: cover;
+}
+nav {
+    background:#668099;
+        position: sticky;
+        height: 50px;
+        top: 0px
+}
+a.menu{
+    display: inline-block;
+    width: 50%;
+    padding: 15px 30px 15px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+a.menu:hover{
+    background-color: rgb(167, 164, 164);
+    }
+
+
+
+

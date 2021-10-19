@@ -28,4 +28,9 @@ this.showAdmin = this.roles.includes('ROLE_ADMIN');
 this.username = user.username;
 }
 }
+logout(): void {
+  this.tokenStorageService.signOut();
+  window.location.reload();
+
+}
 }

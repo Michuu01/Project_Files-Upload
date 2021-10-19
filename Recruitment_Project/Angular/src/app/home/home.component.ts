@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginComponent } from '../login/login.component';
 import { UserService } from '../_services/user.service';
 
 
@@ -8,8 +9,9 @@ import { UserService } from '../_services/user.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
   content?: string;
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,) { }
 
   ngOnInit(): void {
     this.userService.getPublicContent().subscribe(

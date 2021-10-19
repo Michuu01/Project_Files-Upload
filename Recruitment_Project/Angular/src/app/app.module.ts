@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { authInterceptorProviders } from './_services/auth.interceptor';
+import { LoggedComponent } from './logged/logged.component';
+import { RouterModule } from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
+import { FileMenagerComponent } from './file-menager/file-menager.component';
 
 
 
@@ -19,13 +23,17 @@ import { authInterceptorProviders } from './_services/auth.interceptor';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LoggedComponent,
+    ProfileComponent,
+    FileMenagerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,  
+    RouterModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
