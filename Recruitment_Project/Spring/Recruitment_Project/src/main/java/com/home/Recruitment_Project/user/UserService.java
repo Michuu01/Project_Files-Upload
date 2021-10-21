@@ -25,6 +25,13 @@ public class UserService {
         if (!newUser.getEmail().contains(".")) {
             throw new IllegalArgumentException("you don't have a dot ");
         }
+        if (newUser.getUsername().length()<5){
+            throw new IllegalArgumentException("for a short username 'min 5' ");
+        }
+        if (newUser.getUsername().length()>15){
+            throw new IllegalArgumentException("for a long username 'max 15'");
+        }
+
 
         return userRepo.save(newUser);
     }

@@ -20,28 +20,18 @@ public class File  {
     public File() {
     }
 
-    public File(String fileName, byte[] fileData) {
-        this.fileName = fileName;
-        this.fileData = fileData;
-    }
-
-    public File(String fileName, String fileType) {
-        this.fileName = fileName;
-        this.fileType = fileType;
-    }
-
     public File(String fileName, String fileType, byte[] fileData) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.fileData = fileData;
     }
 
-    public File(String fileId, String fileName, String fileType, byte[] fileData) {
+    public File(String fileId, String fileName, String fileType) {
         this.fileId = fileId;
         this.fileName = fileName;
         this.fileType = fileType;
-        this.fileData = fileData;
     }
+
 
     public String getFileId() {
         return fileId;

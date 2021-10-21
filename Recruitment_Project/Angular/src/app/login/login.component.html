@@ -1,4 +1,4 @@
-<div class="container">
+<div class="web">
     <form #loginform = "ngForm" (ngSubmit)= "loginUser()">
   
         <div id="panel" >
@@ -8,9 +8,10 @@
         
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" [(ngModel)] = "form.password" #pasasword ="ngModel">
-        <div id="lower" >
-        <input type="submit"   value="Login" >
-        </div>
+            <div id="lower" >   
+                 <input type="submit"   value="Login" >
+            </div>
+     
     </div>
         </form>
     </div>

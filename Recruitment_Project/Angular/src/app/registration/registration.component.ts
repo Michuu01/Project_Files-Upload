@@ -32,7 +32,7 @@ export class RegistrationComponent implements OnInit {
 
       error =>{
          console.log("NIE UDALO SIE....");
-         this.msg="you enter a incorrect registration details!";
+         this.msg="ERROR!" ;
       }
     )
     }

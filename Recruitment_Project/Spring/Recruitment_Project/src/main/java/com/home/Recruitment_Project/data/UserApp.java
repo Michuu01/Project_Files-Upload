@@ -1,11 +1,14 @@
 package com.home.Recruitment_Project.data;
 
+import com.home.Recruitment_Project.file.File;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -31,6 +34,13 @@ public class UserApp {
 	@NotBlank
 	@Size(max = 120)
 	private String password;
+
+	@OneToMany
+	private List<File> file;
+
+	public UserApp(List<File> file) {
+		this.file = file;
+	}
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles",

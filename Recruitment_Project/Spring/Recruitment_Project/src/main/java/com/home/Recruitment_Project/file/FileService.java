@@ -1,11 +1,13 @@
 package com.home.Recruitment_Project.file;
-import com.home.Recruitment_Project.file.File;
 import com.home.Recruitment_Project.repository.FileRepo;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
 
 @Service
 public class FileService {
@@ -20,14 +22,16 @@ public class FileService {
     @SneakyThrows
     public File saveFile(MultipartFile file) {
         String fileName = StringUtils.cleanPath(Objects.requireNonNull(file.getOriginalFilename()));
-
         File filee = new File(fileName, file.getContentType(), file.getBytes());
-        System.out.println(fileName);
         return fileRepo.save(filee);
 
     }
-
     public File getFile(String fileId) {
         return fileRepo.findById(fileId).orElseThrow(() -> new RuntimeException("Error FIle"));
+    }
+
+
+    public Stream<File> getAllFiles() {
+        return fileRepo.findAll().stream();
     }
 }

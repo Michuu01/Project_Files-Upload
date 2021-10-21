@@ -41,10 +41,10 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['logged']);
      
       },
-      err => {
-        this.msg = err.error.message;
-        this.isLoginFailed = true;
-      }
+      error =>{
+        console.log("NIE UDALO SIE....");
+        this.msg="Incorrect login details!" ;
+     }
     );
   }
 

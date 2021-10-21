@@ -17,15 +17,15 @@ export class AuthService {
   login(username: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + 'signin', {
       username,
-      password
-    }, httpOptions);
+        password
+    },    httpOptions);
   }
 
   register( email: string, username: string, password: string): Observable<any> {
     return this.http.post(AUTH_API + 'signup', {
       username,
-      email,
-      password
-    }, httpOptions);
+       email,
+        password
+    },    httpOptions);
   }
 }

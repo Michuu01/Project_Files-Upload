@@ -2,19 +2,17 @@
     <body>
         <header *ngIf="isLogaOutIn" >  
       <nav > 
-     
-            <a class = "menu" href="/profile">Profile</a>
-            <a class = "menu" (click)= "logout()" href=" " >Logout</a>
+        <a class = "menu" href="/profile">Profile</a>
+       <a class = "menu" (click)= "logout()" href=" " >Logout</a>
       </nav>
-        <div class="file">
-            <input type=file id=file/>
-            <div id=result></div>
-        </div>
+      
+  
+       
         </header>
 
-      <h1  *ngIf="!isLogaOutIn">
-          PLEASE LOGIN
-      </h1>
 
+ <h1 class="abc" *ngIf="!isLogaOutIn">
+    PLEASE LOGIN
+  </h1>
     </body>
 </div>

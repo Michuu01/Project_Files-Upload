@@ -13,6 +13,7 @@ import { LoggedComponent } from './logged/logged.component';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { FileMenagerComponent } from './file-menager/file-menager.component';
+import { UploadFilesComponent } from './upload-files/upload-files.component';
 
 
 
@@ -26,7 +27,8 @@ import { FileMenagerComponent } from './file-menager/file-menager.component';
     RegistrationComponent,
     LoggedComponent,
     ProfileComponent,
-    FileMenagerComponent
+    FileMenagerComponent,
+    UploadFilesComponent
   ],
   imports: [
     BrowserModule,
