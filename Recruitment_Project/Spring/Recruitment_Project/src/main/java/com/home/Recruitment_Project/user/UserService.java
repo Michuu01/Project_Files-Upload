@@ -32,7 +32,6 @@ public class UserService {
             throw new IllegalArgumentException("for a long username 'max 15'");
         }
 
-
         return userRepo.save(newUser);
     }
 }

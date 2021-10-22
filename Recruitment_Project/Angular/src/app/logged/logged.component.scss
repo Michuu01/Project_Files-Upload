@@ -30,5 +30,66 @@ a.menu{
 a.menu:hover{
     background-color: rgb(167, 164, 164);
     }
- 
+    
+   a.file{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -165px;
+    width: 330px;
+    padding: 100px;
+    height: 230px;
+    background: linear-gradient(
+          rgba(193, 231, 22, 0.5),
+          rgba(213, 216, 17, 0.9));
+    border: 3px dashed black;
+    color:black;
+    text-indent: 40px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: -120px;
    
+        }
+        // a.photo{
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     width: 330px;
+        //     height: 230px;
+        //     padding: 100px;
+        //     background: linear-gradient(
+        //           rgba(17, 163, 182, 0.5),
+        //           rgba(27, 91, 128, 0.9));
+        //     border: 3px dashed black;
+        //     color:black;
+        //     text-align: center;
+        //     text-decoration: none;
+        //     text-indent: 0px;
+        //     font-size: 25px;
+        //     font-weight: 600;
+        //     margin-top: -120px;
+        //     margin-left: -180px;
+        //         }
+        //         a.other{
+        //             position: absolute;
+        //             top: 50%;
+        //             left: 50%;
+        //             width: 330px;
+        //             height: 230px;
+        //             padding: 100px;
+        //             background: linear-gradient(
+        //                   rgba(61, 59, 59, 0.5),
+        //                   rgba(87, 85, 85, 0.9));
+        //             border: 3px dashed black;
+        //             color:black;
+        //             text-align: center;
+        //             text-decoration: none;
+        //             text-indent: 10px;
+
+        //             font-size: 25px;
+        //             font-weight: 600;
+        //             margin-top: -120px;
+        //             margin-left: 200px;
+        //                 }
+  

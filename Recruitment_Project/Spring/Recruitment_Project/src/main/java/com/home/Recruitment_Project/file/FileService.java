@@ -29,6 +29,10 @@ public class FileService {
     public File getFile(String fileId) {
         return fileRepo.findById(fileId).orElseThrow(() -> new RuntimeException("Error FIle"));
     }
+    public void deleteFile(String fileId) {
+        fileRepo.deleteById(fileId);
+
+    }
 
 
     public Stream<File> getAllFiles() {

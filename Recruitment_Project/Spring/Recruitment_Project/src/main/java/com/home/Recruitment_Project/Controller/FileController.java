@@ -3,6 +3,7 @@ import com.home.Recruitment_Project.file.File;
 import com.home.Recruitment_Project.file.FileRequest;
 import com.home.Recruitment_Project.file.FileService;
 import com.home.Recruitment_Project.file.ResponseMessage;
+import org.hibernate.cfg.annotations.reflection.XMLContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpHeaders;
@@ -13,8 +14,20 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 
@@ -23,7 +36,6 @@ import java.util.stream.Collectors;
 
 
 public class FileController {
-
 
     FileService fileService;
 
@@ -46,12 +58,6 @@ public class FileController {
             return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
         }
     }
-//      @PostMapping("/UploadMultipleFiles")
-//      public List<FileRequest> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files) {
-//           return Arrays.stream(files).
-//                    map(this::uploadFile).
-//                    collect(Collectors.toList());
-//       }
 
     @GetMapping("/download/{fileName}")
     @CrossOrigin(origins = "http://localhost:4200")
@@ -61,6 +67,12 @@ public class FileController {
                 header(HttpHeaders.CONTENT_DISPOSITION, "attachment;filename=\"" + model.getFileName() + "\"").
                 body(new ByteArrayResource(model.getFileData()));
         }
+    @GetMapping("/delete/{fileName}")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public void  deleteFiles(@PathVariable String fileName) {
+        fileService.deleteFile(fileName);
+    }
+
     @GetMapping("/Allfiles")
     @CrossOrigin(origins = "http://localhost:4200")
     public ResponseEntity<List<FileRequest>> getListFiles() {
@@ -70,11 +82,18 @@ public class FileController {
                     .path("/File/download/")
                     .path(file.getFileId())
                     .toUriString();
+            String fileDeleteUri = ServletUriComponentsBuilder
+                    .fromCurrentContextPath()
+                    .path("/File/delete/")
+                    .path(file.getFileId())
+                    .toUriString();
             return new FileRequest(
                     file.getFileName(),
                     fileDownloadUri,
                     file.getFileType(),
-                    file.getFileData().length);
+                    fileDeleteUri,
+                    file.getFileData().length,
+                    file.getLocalDate());
         }).collect(Collectors.toList());
 
         return ResponseEntity.status(HttpStatus.OK).body(files);

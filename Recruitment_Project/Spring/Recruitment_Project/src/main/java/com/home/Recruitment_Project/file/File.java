@@ -3,6 +3,13 @@ package com.home.Recruitment_Project.file;
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.nio.file.attribute.FileAttributeView;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 
 @Entity
@@ -17,6 +24,25 @@ public class File  {
     @Lob
     private byte[] fileData;
 
+
+ LocalDate  localDate = LocalDate.now(ZoneId.of("Europe/Paris"));
+
+    public LocalDate getLocalDate() {
+        return localDate;
+    }
+
+    public void setLocalDate(LocalDate localDate) {
+        this.localDate = localDate;
+    }
+
+    public File(String fileId, String fileName, String fileType, byte[] fileData, LocalDate localDate) {
+        this.fileId = fileId;
+        this.fileName = fileName;
+        this.fileType = fileType;
+        this.fileData = fileData;
+        this.localDate = localDate;
+    }
+
     public File() {
     }
 
@@ -25,13 +51,6 @@ public class File  {
         this.fileType = fileType;
         this.fileData = fileData;
     }
-
-    public File(String fileId, String fileName, String fileType) {
-        this.fileId = fileId;
-        this.fileName = fileName;
-        this.fileType = fileType;
-    }
-
 
     public String getFileId() {
         return fileId;

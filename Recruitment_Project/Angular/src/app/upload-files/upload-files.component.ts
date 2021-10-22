@@ -16,9 +16,11 @@ export class UploadFilesComponent {
   message = '';
 
   fileInfos?: Observable<any>;
+ 
 
   constructor(private fileuploadingService: UploadFileService) { }
   ngOnInit() {
+    
   this.fileInfos = this.fileuploadingService.getFiles();
   }
   selectFile(event: any) {
@@ -39,6 +41,7 @@ export class UploadFilesComponent {
       if (event.type === HttpEventType.UploadProgress) {
         this.progress = Math.round(100 * event.loaded / event.total);
       } else if (event instanceof HttpResponse) {
+   
         this.message = event.body.message;
         this.fileInfos = this.fileuploadingService.getFiles();
       }

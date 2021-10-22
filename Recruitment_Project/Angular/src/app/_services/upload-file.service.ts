@@ -26,11 +26,15 @@ export class UploadFileService {
   }
 
   download(file: string | undefined): Observable<Blob> {
-    return this.http.get(`${this.baseUrl}/files/${file}`, {
+    return this.http.get(`${this.baseUrl}/download/${file}`, {
       responseType: 'blob'
     });
   }
-
+  delete(file: string | undefined): Observable<Blob> {
+    return this.http.delete(`${this.baseUrl}/delete/${file}`, {
+      responseType: 'blob'
+    });
+  }
   getFiles(): Observable<any> {
 		return this.http.get(`${this.baseUrl}/Allfiles`);
 	  }
