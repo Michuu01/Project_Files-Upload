@@ -12,7 +12,7 @@ import { authInterceptorProviders } from './_services/auth.interceptor';
 import { LoggedComponent } from './logged/logged.component';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
-import { FileMenagerComponent } from './file-menager/file-menager.component';
+
 import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { ContactComponent } from './contact/contact.component';
 
@@ -28,7 +28,7 @@ import { ContactComponent } from './contact/contact.component';
     RegistrationComponent,
     LoggedComponent,
     ProfileComponent,
-    FileMenagerComponent,
+  
     UploadFilesComponent,
     ContactComponent
   ],

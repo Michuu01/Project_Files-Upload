@@ -4,12 +4,11 @@
     box-sizing: border-box;
 }
 header{
-    
     background: url('/assets/mountain.jpg');
     width: 100vw ;
-    height: 1200px ;
+    height: 1100px ;
     margin-left: -8px;
-    margin-right: -8px;
+    margin-right: 8px;
     margin-top: -8px;
     margin-bottom: -8px;
     background-size: cover;
@@ -36,7 +35,6 @@ background-color: rgb(167, 164, 164);
 }
 
 h1{
-    display: inline-block;
 text-align: center;
 background: linear-gradient(
       rgba(61, 59, 59, 0.4),
@@ -48,7 +46,6 @@ margin-right: 680px;
 font-size: 90px;
 }
 h2{
-    display: inline-block;
     text-align: center;
 background: linear-gradient(
       rgba(61, 59, 59, 0.4),
@@ -61,31 +58,55 @@ margin-left: 530px;
 margin-right: 530px;
 }
 body{
+    position: relative;
+    float: inline-start;
     background: rgb(231, 231, 227);
-    height: 1000px;
+    height: 1500px;
     width: 100vw;
     margin-top: -50px;
     margin-left: -8px;
-    margin-right: 8px;
-    margin-bottom: -8px;
+    margin-right: -8px;
+    margin-bottom: 8px;
 }
-img.left{
+img.foto1{
+float: inline-start;
+padding-left: 8px;
     position: relative;
-    width: 30%;
+    width: 36%;
     padding: 100px;
-    margin-left: 50px;
-   
+    margin-left: 90px;
+ 
 }
-p{
-position: absolute;
+img.foto2{
+    position: relative;
+    padding-left: 8px;
+        position: relative;
+        width: 25%;
+        padding: 80px;
+        margin-top: 80px;
+        margin-left: 150px;
+     
+    }
+p.text1{
+position: relative;
     letter-spacing: 1px;
     width: 50%;
-    margin-left: 800px;
-    margin-left: 800px;
-    margin-top: -350px;
-    font-size: 40px;
+    margin-left: 850px;
+    padding: 100px;
+    font-size: 35px;
+    margin-top: -500px
     
 }
+p.text2{
+    position: relative;
+        letter-spacing: 1px;
+        width: 50%;
+        margin-left: 850px;
+        padding: 100px;
+        font-size: 35px;
+        margin-top: -400px
+        
+    }
 
 
 
