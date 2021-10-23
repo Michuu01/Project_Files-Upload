@@ -3,9 +3,36 @@
     padding: 0;
     box-sizing: border-box;
     
+    
 }
- 
-
+ .back{
+background-color: #6666CC;
+margin-left: -8px;
+margin-right: -8px;
+margin-top: -8px;
+margin-bottom: -8px;
+     height: 100%;
+ }
+ nav {
+    background:#9966CC;
+    text-align: center;
+        position: sticky;
+        height: 60px;
+        top: 0px
+}
+a.menu{
+    display: inline-block;
+    width: 50%;
+    padding: 20px 30px 15px 20px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+a.menu:hover{
+    background-color: rgb(167, 164, 164);
+    height: 60px;
+    }
 .all{
     position: absolute;
 margin-left: 10%;
@@ -25,8 +52,8 @@ label{
     border: 1px solid black;
     color:black;  
     background: linear-gradient(
-        rgba(83, 83, 79, 0.5),
-        rgba(63, 63, 62, 0.9));
+        rgba(122, 122, 115, 0.7),
+        rgba(95, 95, 90, 0.9));
 }
 button{
     position: relative;
@@ -37,8 +64,8 @@ button{
  color:black;
  height: 60px;
  background: linear-gradient(
-    rgba(83, 83, 79, 0.5),
-    rgba(63, 63, 62, 0.9));
+    rgba(122, 122, 115, 0.7),
+        rgba(95, 95, 90, 0.9));
  border: 1px solid black;
  color:black;  
  font-weight: 600; 
@@ -62,7 +89,7 @@ a{
 h2{
     position: absolute;
     left: 45%;
-    margin-top: -40px;
+    margin-top: -60px;
     font-size: 35px;
 }
 table{
@@ -72,7 +99,6 @@ table{
     font-weight: 700;
     font-size: 30px;
     width: 100%;
-    height: 100%;
     border: 2px solid black;
     background: rgb(212,210,213);
 background: linear-gradient(90deg, rgba(212,210,213,1) 7%, 

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { UploadFileService } from '../_services/upload-file.service';
 import { saveAs } from 'file-saver';
 import { Observable } from 'rxjs';
+import { TokenStorageService } from '../_services/token-storage.service';
 
 @Component({
   selector: 'app-upload-files',
@@ -18,7 +19,7 @@ export class UploadFilesComponent {
   fileInfos?: Observable<any>;
  
 
-  constructor(private fileuploadingService: UploadFileService) { }
+  constructor(private fileuploadingService: UploadFileService, private tokenStorageService: TokenStorageService) { }
   ngOnInit() {
     
   this.fileInfos = this.fileuploadingService.getFiles();
@@ -62,5 +63,10 @@ export class UploadFilesComponent {
   
     this.selectedFiles = undefined;
   }
+}
+  logout(): void {
+    this.tokenStorageService.signOut();
+    window.location.reload();
   }
 }
+  

@@ -1,6 +1,10 @@
 
 
-
+<div class="back ">
+  <nav>
+    <a class = "menu" href="/logged">Home</a>
+    <a class = "menu" (click)= "logout()" href=" " >Logout</a>
+  </nav>
     <label >
       <input type="file" (change)="selectFile($event)" />
     </label>
@@ -36,10 +40,11 @@
 
        <td class="date"> {{ file.size }} </td>
 
-       <td class ="delete">  <a href="{{ file.fileUri }}"  > Click! </a>  </td>
+       <td class ="delete">  <a href="{{ file.fileUri }}" onclick="return confirm('Are you sure?')" > Click! </a>  </td>
       </tr>
     </tbody>
   </table>
 
 
+</div>
 </div>

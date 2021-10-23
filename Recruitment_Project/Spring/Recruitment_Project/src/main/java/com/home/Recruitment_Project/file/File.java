@@ -2,11 +2,7 @@ package com.home.Recruitment_Project.file;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
-import java.nio.file.attribute.FileAttributeView;
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
+
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;

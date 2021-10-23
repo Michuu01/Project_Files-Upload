@@ -4,37 +4,39 @@
     box-sizing: border-box;
 }
 header{
-    background: url('/assets/background.jpg');
+    
+    background: url('/assets/mountain.jpg');
     width: 100vw ;
-    height: 100vh ;
+    height: 1200px ;
     margin-left: -8px;
-    margin-right: 8px;
+    margin-right: -8px;
     margin-top: -8px;
     margin-bottom: -8px;
     background-size: cover;
 }
 nav {
-    background:#668099;
+    background:#9966CC;
         position: sticky;
-        height: 50px;
+        text-align: center;
+        height: 60px;
         top: 0px
 }
 a.menu{
     display: inline-block;
     width: 25%;
-    padding: 15px 30px 15px 20px;
+    padding: 20px 30px 15px 20px;
     color: white;
+    height: 60px;
     text-decoration: none;
     text-align: center;
+    font-size: 20px;
 }
 a.menu:hover{
 background-color: rgb(167, 164, 164);
 }
 
-
-
-
 h1{
+    display: inline-block;
 text-align: center;
 background: linear-gradient(
       rgba(61, 59, 59, 0.4),
@@ -46,24 +48,43 @@ margin-right: 680px;
 font-size: 90px;
 }
 h2{
+    display: inline-block;
     text-align: center;
 background: linear-gradient(
       rgba(61, 59, 59, 0.4),
       rgba(87, 85, 85, 0.6));
 color:red;
 font-size: 55px;
-margin-top: 250px;
+padding: 20px 30px 15px 25px;
+margin-top: 10%;
 margin-left: 530px;
 margin-right: 530px;
 }
-
+body{
+    background: rgb(231, 231, 227);
+    height: 1000px;
+    width: 100vw;
+    margin-top: -50px;
+    margin-left: -8px;
+    margin-right: 8px;
+    margin-bottom: -8px;
+}
+img.left{
+    position: relative;
+    width: 30%;
+    padding: 100px;
+    margin-left: 50px;
+   
+}
 p{
-    text-align: left;
-    color: rgb(211, 36, 36);
-    margin-left: 100px;
-    margin-top: 40px;
+position: absolute;
+    letter-spacing: 1px;
+    width: 50%;
+    margin-left: 800px;
+    margin-left: 800px;
+    margin-top: -350px;
     font-size: 40px;
-    background: beige;
+    
 }
 
 
