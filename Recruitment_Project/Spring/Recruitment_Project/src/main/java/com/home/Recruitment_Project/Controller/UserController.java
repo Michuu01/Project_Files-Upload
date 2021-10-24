@@ -1,9 +1,6 @@
 package com.home.Recruitment_Project.Controller;
-
 import javax.validation.Valid;
-
 import com.home.Recruitment_Project.security.jwt.JwtUtils;
-
 import com.home.Recruitment_Project.data.EnumRole;
 import com.home.Recruitment_Project.data.Role;
 import com.home.Recruitment_Project.data.UserApp;
@@ -11,7 +8,6 @@ import com.home.Recruitment_Project.user.LoginRequest;
 import com.home.Recruitment_Project.user.RegisterRequest;
 import com.home.Recruitment_Project.security.jwt.JwtResponse;
 import com.home.Recruitment_Project.security.jwt.MessageResponse;
-
 import com.home.Recruitment_Project.repository.RoleRepo;
 import com.home.Recruitment_Project.repository.UserRepo;
 import com.home.Recruitment_Project.user.Service.UserDetailsImpl;
@@ -25,7 +21,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

@@ -1,7 +1,5 @@
 package com.home.Recruitment_Project.security;
 
-import com.home.Recruitment_Project.security.AuthEntryPointJwt;
-import com.home.Recruitment_Project.security.AuthTokenFilter;
 import com.home.Recruitment_Project.user.Service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -21,8 +19,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
-		// securedEnabled = true,
-		// jsr250Enabled = true,
 		prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired

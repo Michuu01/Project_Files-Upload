@@ -1,18 +1,16 @@
 package com.home.Recruitment_Project.file;
 
-
-import java.text.DateFormat;
-import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+
 
 public class FileRequest {
     private String fileName;
     private String fileType;
     private String fileUri;
-    private long size;
+    private String deleteUri;
+    private double size;
     LocalDate localDate = LocalDate.now(ZoneId.of("Europe/Paris"));
 
     public LocalDate getLocalDate() {
@@ -23,19 +21,21 @@ public class FileRequest {
         this.localDate = localDate;
     }
 
-    public FileRequest(String name, String fileName, String fileType, String fileUri, long size, LocalDate localDate) {
-        this.fileName = fileName;
-        this.fileType = fileType;
-        this.fileUri = fileUri;
-        this.size = size;
-        this.localDate = localDate;
+    public String getDeleteUri() {
+        return deleteUri;
     }
 
-    public FileRequest(String fileName, String fileType, String fileUri, long size) {
+    public void setDeleteUri(String deleteUri) {
+        this.deleteUri = deleteUri;
+    }
+
+    public FileRequest(String fileName, String fileType, String fileUri, String deleteUri, double size, LocalDate localDate) {
         this.fileName = fileName;
         this.fileType = fileType;
         this.fileUri = fileUri;
+        this.deleteUri = deleteUri;
         this.size = size;
+        this.localDate = localDate;
     }
 
     public String getFileName() {
@@ -62,11 +62,20 @@ public class FileRequest {
         this.fileUri = fileUri;
     }
 
-    public long getSize() {
+    public double getSize() {
+        if (size < 11000) {
+            size = 0.01;
+        } else {
+
+            size = size / 1048576;
+            size *= 100;
+            size = Math.round(size);
+            size /= 100;
+
+        }
         return size;
     }
-
-    public void setSize(long size) {
+    public void setSize(double size) {
         this.size = size;
     }
 }

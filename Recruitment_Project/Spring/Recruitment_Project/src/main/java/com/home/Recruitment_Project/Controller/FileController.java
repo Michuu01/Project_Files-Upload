@@ -3,31 +3,14 @@ import com.home.Recruitment_Project.file.File;
 import com.home.Recruitment_Project.file.FileRequest;
 import com.home.Recruitment_Project.file.FileService;
 import com.home.Recruitment_Project.file.ResponseMessage;
-import org.hibernate.cfg.annotations.reflection.XMLContext;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.format.FormatStyle;
-import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 
@@ -89,8 +72,8 @@ public class FileController {
                     .toUriString();
             return new FileRequest(
                     file.getFileName(),
-                    fileDownloadUri,
                     file.getFileType(),
+                    fileDownloadUri,
                     fileDeleteUri,
                     file.getFileData().length,
                     file.getLocalDate());

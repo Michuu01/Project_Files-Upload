@@ -30,17 +30,17 @@
     <tbody >
       <tr><th class="name">Name</th> <th class="date">Date</th><th class= "date">
 
-        File size</th> <th class= "delete">Delete</th></tr>
+        File size (MB)</th> <th class= "delete">Delete</th></tr>
    
       <tr *ngFor="let file of fileInfos  | async "   > 
 
-       <td class="name" > <a href="{{ file.fileName }}"  > {{ file.fileType }} </a> </td>
+       <td class="name" > <a href="{{ file.fileUri }}"  > {{ file.fileName }} </a> </td>
 
         <td class="date"> <a> {{ file.localDate }} </a> </td>
 
        <td class="date"> {{ file.size }} </td>
 
-       <td class ="delete">  <a href="{{ file.fileUri }}" onclick="return confirm('Are you sure?')" > Click! </a>  </td>
+       <td class ="delete">  <a href="{{ file.deleteUri }}" onclick="return confirm('Are you sure?')" > Click! </a>  </td>
       </tr>
     </tbody>
   </table>

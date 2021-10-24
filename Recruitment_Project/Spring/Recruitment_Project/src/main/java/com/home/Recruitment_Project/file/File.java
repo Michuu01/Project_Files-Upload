@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -20,8 +21,7 @@ public class File  {
     @Lob
     private byte[] fileData;
 
-
- LocalDate  localDate = LocalDate.now(ZoneId.of("Europe/Paris"));
+    LocalDate localDate = LocalDate.now(ZoneId.of("Europe/Paris"));
 
     public LocalDate getLocalDate() {
         return localDate;
